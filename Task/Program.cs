@@ -17,9 +17,16 @@ void CheckArray()
     {
         if (arr[i].Length <= 3)
         {
+            a = i;
             PrintResult();
         }
     }
 }
+
+void PrintResult()
+{
+    Console.Write(arr[a] + " ");
+}
 FillArray();
+Console.WriteLine();
 CheckArray();
