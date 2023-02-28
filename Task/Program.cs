@@ -11,22 +11,44 @@ void FillArray()
     }
 }
 
+int count = 0;
 void CheckArray()
 {
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i].Length <= 3)
         {
-            a = i;
-            PrintResult();
+            count++;
         }
     }
 }
 
-void PrintResult()
+string[] arr2 = new string[count];
+
+void FillNewArray()
 {
-    Console.Write(arr[a] + " ");
+ arr2 = new string[count];
+ int b = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            arr2[b] = arr[i];
+            b++;
+        }
+    }
 }
+
+void Result()
+{
+    Console.WriteLine();
+    foreach (var i in arr2)
+    {
+        Console.Write(i + " ");
+    }
+}
+
 FillArray();
-Console.WriteLine();
 CheckArray();
+FillNewArray();
+Result();
