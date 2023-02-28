@@ -11,5 +11,15 @@ void FillArray()
     }
 }
 
-
+void CheckArray()
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            PrintResult();
+        }
+    }
+}
 FillArray();
+CheckArray();
